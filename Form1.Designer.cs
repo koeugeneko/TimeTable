@@ -28,58 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            textBox1 = new TextBox();
-            flowLayoutPanel1.SuspendLayout();
+            buttonEnter = new Button();
+            txtName = new TextBox();
+            labelName = new Label();
             SuspendLayout();
             // 
-            // button1
+            // buttonEnter
             // 
-            button1.Location = new Point(216, 370);
-            button1.Name = "button1";
-            button1.Size = new Size(183, 59);
-            button1.TabIndex = 0;
-            button1.Text = "open Panel 1";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            buttonEnter.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            buttonEnter.Location = new Point(390, 247);
+            buttonEnter.Name = "buttonEnter";
+            buttonEnter.Size = new Size(453, 64);
+            buttonEnter.TabIndex = 0;
+            buttonEnter.Text = "Enter";
+            buttonEnter.UseVisualStyleBackColor = true;
+            buttonEnter.Click += buttonEnter_Click;
             // 
-            // flowLayoutPanel1
+            // txtName
             // 
-            flowLayoutPanel1.Controls.Add(textBox1);
-            flowLayoutPanel1.Location = new Point(-3, -9);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(915, 525);
-            flowLayoutPanel1.TabIndex = 1;
-            flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
+            txtName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtName.Location = new Point(445, 203);
+            txtName.Name = "txtName";
+            txtName.Size = new Size(398, 27);
+            txtName.TabIndex = 1;
+            txtName.Text = "Enter Name";
+            txtName.Click += textName_click;
+            txtName.TextChanged += txtName_TextChanged;
             // 
-            // textBox1
+            // labelName
             // 
-            textBox1.Location = new Point(3, 3);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 0;
-            textBox1.Text = "asdf";
-            textBox1.TextChanged += textBox1_TextChanged;
+            labelName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelName.AutoSize = true;
+            labelName.Location = new Point(390, 206);
+            labelName.Name = "labelName";
+            labelName.Size = new Size(49, 20);
+            labelName.TabIndex = 2;
+            labelName.Text = "Name";
+            labelName.Click += labelName_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1902, 1033);
-            Controls.Add(button1);
-            Controls.Add(flowLayoutPanel1);
+            ClientSize = new Size(1262, 673);
+            Controls.Add(labelName);
+            Controls.Add(txtName);
+            Controls.Add(buttonEnter);
             Name = "Form1";
-            Text = "Form1";
-            flowLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.PerformLayout();
+            Text = "WinForms";
+            Load += Form1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private TextBox textBox1;
+        private Button buttonEnter;
+        private TextBox txtName;
+        private Label labelName;
     }
 }
