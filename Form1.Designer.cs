@@ -30,12 +30,13 @@
         {
             button1 = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            flowLayoutPanel2 = new FlowLayoutPanel();
+            textBox1 = new TextBox();
+            flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(80, 334);
+            button1.Location = new Point(216, 370);
             button1.Name = "button1";
             button1.Size = new Size(183, 59);
             button1.TabIndex = 0;
@@ -45,30 +46,33 @@
             // 
             // flowLayoutPanel1
             // 
-            flowLayoutPanel1.Location = new Point(32, 47);
+            flowLayoutPanel1.Controls.Add(textBox1);
+            flowLayoutPanel1.Location = new Point(-3, -9);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(353, 262);
+            flowLayoutPanel1.Size = new Size(915, 525);
             flowLayoutPanel1.TabIndex = 1;
             flowLayoutPanel1.Paint += flowLayoutPanel1_Paint;
             // 
-            // flowLayoutPanel2
+            // textBox1
             // 
-            flowLayoutPanel2.Location = new Point(535, 77);
-            flowLayoutPanel2.Name = "flowLayoutPanel2";
-            flowLayoutPanel2.Size = new Size(250, 125);
-            flowLayoutPanel2.TabIndex = 2;
-            flowLayoutPanel2.Paint += flowLayoutPanel2_Paint;
+            textBox1.Location = new Point(3, 3);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 27);
+            textBox1.TabIndex = 0;
+            textBox1.Text = "asdf";
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(910, 511);
+            ClientSize = new Size(1902, 1033);
             Controls.Add(button1);
-            Controls.Add(flowLayoutPanel2);
             Controls.Add(flowLayoutPanel1);
             Name = "Form1";
             Text = "Form1";
+            flowLayoutPanel1.ResumeLayout(false);
+            flowLayoutPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -76,6 +80,6 @@
 
         private Button button1;
         private FlowLayoutPanel flowLayoutPanel1;
-        private FlowLayoutPanel flowLayoutPanel2;
+        private TextBox textBox1;
     }
 }
