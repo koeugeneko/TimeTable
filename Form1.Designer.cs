@@ -28,19 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
+            panelHome = new Panel();
+            panelSide = new Panel();
             SuspendLayout();
+            // 
+            // panelHome
+            // 
+            panelHome.BackColor = SystemColors.ActiveBorder;
+            panelHome.Dock = DockStyle.Fill;
+            panelHome.Location = new Point(0, 0);
+            panelHome.Name = "panelHome";
+            panelHome.Size = new Size(1902, 1033);
+            panelHome.TabIndex = 0;
+            // 
+            // panelSide
+            // 
+            panelSide.BackColor = Color.FromArgb(88, 88, 88);
+            panelSide.Dock = DockStyle.Left;
+            panelSide.Location = new Point(0, 0);
+            panelSide.Name = "panelSide";
+            panelSide.Size = new Size(260, 1033);
+            panelSide.TabIndex = 1;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1262, 673);
+            ClientSize = new Size(1902, 1033);
+            Controls.Add(panelSide);
+            Controls.Add(panelHome);
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "WinForms";
             Load += Form1_Load;
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel panelHome;
+        private Panel panelSide;
     }
 }
