@@ -12,7 +12,8 @@ namespace TimeTable
 {
     public partial class LoginPage : UserControl
     {
-
+        string username;
+        string password;
 
         public LoginPage()
         {
@@ -38,15 +39,23 @@ namespace TimeTable
             }
         }
 
+        public event Action goToHomePage;
         private void btnLoginLogin_Click(object sender, EventArgs e)
         {
             //sould add a loading screen here
+            username = txtUsername.Text;
+            password = txtPassword.Text;
 
+            goToHomePage?.Invoke();
         }
 
         private void LoginPage_Load(object sender, EventArgs e)
         {
-            Cursor = Cursors.Default;   
+            // Set focus to the username label when login page loads - workaround for text box focus issue
+            this.BeginInvoke(new Action(() =>
+            {
+                lblUsername.Focus(); 
+            }));
         }
     }
 }

@@ -34,7 +34,7 @@
             // btnBreak
             // 
             btnBreak.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBreak.Location = new Point(668, 462);
+            btnBreak.Location = new Point(466, 399);
             btnBreak.Name = "btnBreak";
             btnBreak.Size = new Size(315, 67);
             btnBreak.TabIndex = 0;
@@ -47,7 +47,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(btnBreak);
             Name = "Timer";
-            Size = new Size(1920, 1080);
+            Size = new Size(1280, 720);
             Load += Timer_Load;
             ResumeLayout(false);
         }
