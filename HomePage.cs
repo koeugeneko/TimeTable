@@ -16,5 +16,22 @@ namespace TimeTable
         {
             InitializeComponent();
         }
+
+        public event Action goToTimerPage;
+        private void btnSubject1_Click(object sender, EventArgs e)
+        {
+            goToTimerPage?.Invoke();
+
+        }
+
+        private void btnSubject2_Click(object sender, EventArgs e)
+        {
+            goToTimerPage?.Invoke();
+        }
+
+        private void btnSubject3_Click(object sender, EventArgs e)
+        {
+            goToTimerPage?.Invoke();
+        }
     }
 }

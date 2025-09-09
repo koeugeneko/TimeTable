@@ -46,6 +46,7 @@
             btnSubject1.TabIndex = 0;
             btnSubject1.Text = "Subject 1";
             btnSubject1.UseVisualStyleBackColor = false;
+            btnSubject1.Click += btnSubject1_Click;
             // 
             // btnSubject2
             // 
@@ -58,6 +59,7 @@
             btnSubject2.TabIndex = 1;
             btnSubject2.Text = "Subject 2";
             btnSubject2.UseVisualStyleBackColor = false;
+            btnSubject2.Click += btnSubject2_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -86,6 +88,7 @@
             btnSubject3.TabIndex = 2;
             btnSubject3.Text = "Subject 3";
             btnSubject3.UseVisualStyleBackColor = false;
+            btnSubject3.Click += btnSubject3_Click;
             // 
             // HomePage
             // 

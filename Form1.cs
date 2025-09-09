@@ -30,6 +30,16 @@ namespace TimeTable
             panelHome.Controls.Clear();
             HomePage homePage = new HomePage();
             panelHome.Controls.Add(homePage);
+
+            homePage.goToTimerPage += () => loadTimerPage(); // Subscribe to the event to load the timer page
+
+        }
+
+        void loadTimerPage()
+        {
+            panelHome.Controls.Clear();
+            Timer timer = new Timer();
+            panelHome.Controls.Add(timer);
         }
     }
 }

@@ -108,6 +108,7 @@
             chkRememberMe.TabIndex = 5;
             chkRememberMe.Text = "RememberMe";
             chkRememberMe.UseVisualStyleBackColor = true;
+            chkRememberMe.CheckedChanged += chkRememberMe_CheckedChanged;
             // 
             // LoginPage
             // 

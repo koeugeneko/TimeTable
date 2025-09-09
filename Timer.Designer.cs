@@ -34,7 +34,7 @@
             // btnBreak
             // 
             btnBreak.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnBreak.Location = new Point(466, 399);
+            btnBreak.Location = new Point(589, 399);
             btnBreak.Name = "btnBreak";
             btnBreak.Size = new Size(315, 67);
             btnBreak.TabIndex = 0;

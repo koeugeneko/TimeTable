@@ -46,7 +46,7 @@ namespace TimeTable
             username = txtUsername.Text;
             password = txtPassword.Text;
 
-            goToHomePage?.Invoke();
+            goToHomePage?.Invoke(); // Trigger the event to notify that login is successful
         }
 
         private void LoginPage_Load(object sender, EventArgs e)
@@ -54,8 +54,13 @@ namespace TimeTable
             // Set focus to the username label when login page loads - workaround for text box focus issue
             this.BeginInvoke(new Action(() =>
             {
-                lblUsername.Focus(); 
+                lblUsername.Focus();
             }));
+        }
+
+        private void chkRememberMe_CheckedChanged(object sender, EventArgs e)
+        {
+            // need to save username and password to local storage // add a autofill funtion here
         }
     }
 }
