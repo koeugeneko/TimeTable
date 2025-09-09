@@ -24,6 +24,7 @@ namespace TimeTable
             if (txtUsername.Text == "Username")
             {
                 txtUsername.Clear();
+                txtUsername.ForeColor = Color.Black;
             }
         }
 
@@ -33,6 +34,7 @@ namespace TimeTable
             {
                 txtPassword.Clear();
                 txtPassword.UseSystemPasswordChar = true;
+                txtPassword.ForeColor = Color.Black;
             }
         }
 
@@ -44,7 +46,7 @@ namespace TimeTable
 
         private void LoginPage_Load(object sender, EventArgs e)
         {
-
+            Cursor = Cursors.Default;   
         }
     }
 }

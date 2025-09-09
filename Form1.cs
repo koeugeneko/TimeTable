@@ -19,8 +19,8 @@ namespace TimeTable
         public void loadHomePage()
         {
             panelHome.Controls.Clear();
-            HomePage homePage = new HomePage();
-            panelHome.Controls.Add(homePage);
+            //HomePage homePage = new HomePage();
+            //panelHome.Controls.Add(homePage);
         }
     }
 }
