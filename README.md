@@ -2,8 +2,14 @@
 
 This is a NEA project for computer science AQA A-level
 
-To use the app:
+Setup:
 
-Create account - Login - Setup: Subjects taking, Prefered revision time
+Create account - Login - Subjects taking - Prefered revision time
 
-Functions of the app: Timer for revise, Smart reminder, Priority manger, Progress tracker, Calendar, Event adder
+Dayily use:
+
+Check the subjects to revise - revise till timer stops
+
+Functions of the app: 
+
+Timer for revise, Smart reminder, Priority manger, Progress tracker, Calendar, Event adder
