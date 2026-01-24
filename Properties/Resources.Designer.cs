@@ -59,25 +59,5 @@ namespace TimeTable.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP {
-            get {
-                object obj = ResourceManager.GetObject("360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap particle_lines_futuristic_gradient_background_53876_104053 {
-            get {
-                object obj = ResourceManager.GetObject("particle-lines-futuristic-gradient-background_53876-104053", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
