@@ -1,4 +1,6 @@
 using System.Windows.Forms;
+using Npgsql;
+using Bcrypt.Net;
 
 namespace TimeTable
 {
@@ -31,5 +33,8 @@ namespace TimeTable
             HomePage homePage = new HomePage();
             panelHome.Controls.Add(homePage);
         }
+
+        
+
     }
 }

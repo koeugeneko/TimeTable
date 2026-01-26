@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,10 +19,10 @@ namespace TimeTable
         }
 
         public event Action goToTimerPage;
+
         private void btnSubject1_Click(object sender, EventArgs e)
         {
-            goToTimerPage?.Invoke();
-
+            
         }
 
         private void btnSubject2_Click(object sender, EventArgs e)
