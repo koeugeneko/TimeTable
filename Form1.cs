@@ -1,6 +1,5 @@
 using System.Windows.Forms;
 using Npgsql;
-using Bcrypt.Net;
 
 namespace TimeTable
 {
