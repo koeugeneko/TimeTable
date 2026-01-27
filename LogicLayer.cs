@@ -11,32 +11,44 @@ namespace TimeTable
 
         public void HashPassword(string username, string password)
         {
-            string usernamePassword = username + password;
+            string plaintext = username + password;
+
             // get salt form username and passowrd 
-            for (int i = 0; i < password.Length; i++)
+            for (int i = 0; i < password.Length / 2 ; i++) // run the genrate salt with password length/2 times
             {
-                GenrateSalt(usernamePassword);
+                plaintext = GenrateSalt(plaintext);
             }
             // add salt to username password
 
+            // convert to hex
             // output hash string
 
         }
 
-        public int GenrateSalt(string usernamePassword)
+        public string GenrateSalt(string plaintext)
         {   
             
             int salt = 0;
-            for (int i = 0; i < usernamePassword.Length / 2; i++)
+            for (int i = 0; i < plaintext.Length; i++) // salt = ASCII * posision
             {
-                salt += Convert.ToInt32(usernamePassword[i]) * i;
+                salt += Convert.ToInt32(plaintext[i]) * i;
             }
 
-            return salt;
+            return Convert.ToString(salt);
         }
 
         public bool ValidatePassowrd(string password)
-        {   
+        {
+
+            if (string.IsNullOrEmpty(password)) // check if password is empty
+            {
+                return false;
+            }
+            else if (password.Length < 8 || password.Length > 16) // check if password length is between 8 and 16
+            {
+                return false;
+            }
+
             bool containsUpper = false; // check if password contains at least 1 Upper case
             foreach (char c in password)
             {
@@ -66,20 +78,7 @@ namespace TimeTable
             }
 
 
-            if (string.IsNullOrEmpty(password)) // check if password is empty
-            {
-                return false;
-            }
-            else if (password.Length < 8 || password.Length > 16) // check if password length is between 8 and 16
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-
-
+            return true;
         }
     }
 
