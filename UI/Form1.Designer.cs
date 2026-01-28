@@ -36,9 +36,10 @@
             // 
             panelHome.BackColor = Color.Gray;
             panelHome.Dock = DockStyle.Fill;
-            panelHome.Location = new Point(0, 0);
+            panelHome.Location = new Point(180, 0);
+            panelHome.Margin = new Padding(4);
             panelHome.Name = "panelHome";
-            panelHome.Size = new Size(1262, 673);
+            panelHome.Size = new Size(822, 712);
             panelHome.TabIndex = 0;
             // 
             // panelSide
@@ -46,17 +47,19 @@
             panelSide.BackColor = Color.FromArgb(88, 88, 88);
             panelSide.Dock = DockStyle.Left;
             panelSide.Location = new Point(0, 0);
+            panelSide.Margin = new Padding(4);
             panelSide.Name = "panelSide";
-            panelSide.Size = new Size(260, 673);
+            panelSide.Size = new Size(180, 712);
             panelSide.TabIndex = 1;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1262, 673);
-            Controls.Add(panelSide);
+            ClientSize = new Size(1002, 712);
             Controls.Add(panelHome);
+            Controls.Add(panelSide);
+            Margin = new Padding(4);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "WinForms";

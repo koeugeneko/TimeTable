@@ -1,5 +1,6 @@
 using System.Windows.Forms;
 using Npgsql;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TimeTable
 {
@@ -20,6 +21,7 @@ namespace TimeTable
         {
             panelHome.Controls.Clear();
             LoginPage loginpage = new LoginPage(); // Create an instance of the login page
+            loginpage.Dock = DockStyle.Fill;
             panelHome.Controls.Add(loginpage);
 
             loginpage.goToHomePage += () => loadHomePage(); // Subscribe to the event to load the home page after login
@@ -32,8 +34,5 @@ namespace TimeTable
             HomePage homePage = new HomePage();
             panelHome.Controls.Add(homePage);
         }
-
-        
-
     }
 }
