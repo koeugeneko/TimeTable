@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             btnSubject1 = new Button();
             btnSubject2 = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             btnSubject3 = new Button();
-            printPreviewDialog1 = new PrintPreviewDialog();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -92,16 +90,6 @@
             btnSubject3.UseVisualStyleBackColor = false;
             btnSubject3.Click += btnSubject3_Click;
             // 
-            // printPreviewDialog1
-            // 
-            printPreviewDialog1.AutoScrollMargin = new Size(0, 0);
-            printPreviewDialog1.AutoScrollMinSize = new Size(0, 0);
-            printPreviewDialog1.ClientSize = new Size(400, 300);
-            printPreviewDialog1.Enabled = true;
-            printPreviewDialog1.Icon = (Icon)resources.GetObject("printPreviewDialog1.Icon");
-            printPreviewDialog1.Name = "printPreviewDialog1";
-            printPreviewDialog1.Visible = false;
-            // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -119,6 +107,5 @@
         private Button btnSubject2;
         private TableLayoutPanel tableLayoutPanel1;
         private Button btnSubject3;
-        private PrintPreviewDialog printPreviewDialog1;
     }
 }

@@ -41,10 +41,9 @@
             lblUsername.AutoSize = true;
             lblUsername.FlatStyle = FlatStyle.Flat;
             lblUsername.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUsername.Location = new Point(193, 179);
-            lblUsername.Margin = new Padding(4, 0, 4, 0);
+            lblUsername.Location = new Point(102, 117);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(142, 38);
+            lblUsername.Size = new Size(117, 31);
             lblUsername.TabIndex = 0;
             lblUsername.Text = "Username";
             // 
@@ -53,10 +52,9 @@
             txtUsername.BackColor = Color.White;
             txtUsername.BorderStyle = BorderStyle.FixedSingle;
             txtUsername.ForeColor = Color.Silver;
-            txtUsername.Location = new Point(193, 241);
-            txtUsername.Margin = new Padding(4);
+            txtUsername.Location = new Point(102, 167);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(501, 31);
+            txtUsername.Size = new Size(401, 27);
             txtUsername.TabIndex = 1;
             txtUsername.Text = "Username";
             txtUsername.Click += txtUsername_Click;
@@ -66,10 +64,9 @@
             txtPassword.BackColor = Color.White;
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
             txtPassword.ForeColor = Color.Silver;
-            txtPassword.Location = new Point(193, 337);
-            txtPassword.Margin = new Padding(4);
+            txtPassword.Location = new Point(102, 244);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(501, 31);
+            txtPassword.Size = new Size(401, 27);
             txtPassword.TabIndex = 3;
             txtPassword.Text = "Password";
             txtPassword.Click += txtPassword_Click;
@@ -79,10 +76,9 @@
             lblLoginPassword.AutoSize = true;
             lblLoginPassword.FlatStyle = FlatStyle.Flat;
             lblLoginPassword.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblLoginPassword.Location = new Point(184, 294);
-            lblLoginPassword.Margin = new Padding(4, 0, 4, 0);
+            lblLoginPassword.Location = new Point(95, 209);
             lblLoginPassword.Name = "lblLoginPassword";
-            lblLoginPassword.Size = new Size(132, 38);
+            lblLoginPassword.Size = new Size(110, 31);
             lblLoginPassword.TabIndex = 2;
             lblLoginPassword.Text = "Password";
             // 
@@ -90,10 +86,9 @@
             // 
             btnLoginLogin.BackColor = Color.FromArgb(128, 128, 255);
             btnLoginLogin.FlatStyle = FlatStyle.Flat;
-            btnLoginLogin.Location = new Point(439, 424);
-            btnLoginLogin.Margin = new Padding(4);
+            btnLoginLogin.Location = new Point(299, 313);
             btnLoginLogin.Name = "btnLoginLogin";
-            btnLoginLogin.Size = new Size(255, 65);
+            btnLoginLogin.Size = new Size(204, 52);
             btnLoginLogin.TabIndex = 4;
             btnLoginLogin.Text = "login";
             btnLoginLogin.UseVisualStyleBackColor = false;
@@ -102,10 +97,9 @@
             // chkRememberMe
             // 
             chkRememberMe.AutoSize = true;
-            chkRememberMe.Location = new Point(193, 393);
-            chkRememberMe.Margin = new Padding(4);
+            chkRememberMe.Location = new Point(102, 288);
             chkRememberMe.Name = "chkRememberMe";
-            chkRememberMe.Size = new Size(149, 29);
+            chkRememberMe.Size = new Size(125, 24);
             chkRememberMe.TabIndex = 5;
             chkRememberMe.Text = "RememberMe";
             chkRememberMe.UseVisualStyleBackColor = true;
@@ -113,7 +107,7 @@
             // 
             // LoginPage
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Stretch;
             Controls.Add(chkRememberMe);
@@ -123,9 +117,8 @@
             Controls.Add(txtUsername);
             Controls.Add(lblUsername);
             DoubleBuffered = true;
-            Margin = new Padding(4);
             Name = "LoginPage";
-            Size = new Size(1002, 712);
+            Size = new Size(661, 577);
             Load += LoginPage_Load;
             ResumeLayout(false);
             PerformLayout();

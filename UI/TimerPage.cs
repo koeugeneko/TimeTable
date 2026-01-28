@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace TimeTable.UI
 {
-    public partial class Timer : UserControl
+    public partial class TimerPage : UserControl
     {
-        public Timer()
+        public TimerPage()
         {
             InitializeComponent();
         }
+
     }
 }

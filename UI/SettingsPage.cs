@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TimeTable.UI
 {
-    public partial class Settings : UserControl
+    public partial class SettingsPage : UserControl
     {
-        public Settings()
+        public SettingsPage()
         {
             InitializeComponent();
         }
