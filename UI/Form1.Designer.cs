@@ -60,6 +60,9 @@
             Controls.Add(panelHome);
             Controls.Add(panelSide);
             Margin = new Padding(4);
+            MaximizeBox = false;
+            MaximumSize = new Size(1024, 768);
+            MinimumSize = new Size(1024, 768);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "WinForms";

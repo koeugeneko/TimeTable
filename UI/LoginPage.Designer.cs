@@ -38,7 +38,6 @@
             // 
             // lblUsername
             // 
-            lblUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblUsername.AutoSize = true;
             lblUsername.FlatStyle = FlatStyle.Flat;
             lblUsername.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -51,7 +50,6 @@
             // 
             // txtUsername
             // 
-            txtUsername.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtUsername.BackColor = Color.White;
             txtUsername.BorderStyle = BorderStyle.FixedSingle;
             txtUsername.ForeColor = Color.Silver;
@@ -65,7 +63,6 @@
             // 
             // txtPassword
             // 
-            txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             txtPassword.BackColor = Color.White;
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
             txtPassword.ForeColor = Color.Silver;
@@ -79,7 +76,6 @@
             // 
             // lblLoginPassword
             // 
-            lblLoginPassword.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblLoginPassword.AutoSize = true;
             lblLoginPassword.FlatStyle = FlatStyle.Flat;
             lblLoginPassword.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -92,7 +88,6 @@
             // 
             // btnLoginLogin
             // 
-            btnLoginLogin.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             btnLoginLogin.BackColor = Color.FromArgb(128, 128, 255);
             btnLoginLogin.FlatStyle = FlatStyle.Flat;
             btnLoginLogin.Location = new Point(439, 424);
@@ -106,9 +101,8 @@
             // 
             // chkRememberMe
             // 
-            chkRememberMe.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             chkRememberMe.AutoSize = true;
-            chkRememberMe.Location = new Point(193, 396);
+            chkRememberMe.Location = new Point(193, 393);
             chkRememberMe.Margin = new Padding(4);
             chkRememberMe.Name = "chkRememberMe";
             chkRememberMe.Size = new Size(149, 29);
