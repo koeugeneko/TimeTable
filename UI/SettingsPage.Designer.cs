@@ -28,44 +28,199 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            tableLayoutPanel1 = new TableLayoutPanel();
+            label1 = new Label();
+            label4 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label5 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button4 = new Button();
+            label7 = new Label();
+            label8 = new Label();
+            trackBar2 = new TrackBar();
+            trackBar3 = new TrackBar();
+            checkBox1 = new CheckBox();
+            numericUpDown1 = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)trackBar2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)trackBar3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
-            // panel1
+            // label1
             // 
-            panel1.Location = new Point(203, 357);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(250, 125);
-            panel1.TabIndex = 0;
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.Location = new Point(54, 55);
+            label1.Name = "label1";
+            label1.Size = new Size(188, 40);
+            label1.TabIndex = 0;
+            label1.Text = "Task limit per day:";
             // 
-            // tableLayoutPanel1
+            // label4
             // 
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Location = new Point(124, 192);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(250, 125);
-            tableLayoutPanel1.TabIndex = 1;
+            label4.Font = new Font("Segoe UI", 10F);
+            label4.Location = new Point(54, 107);
+            label4.Name = "label4";
+            label4.Size = new Size(250, 40);
+            label4.TabIndex = 3;
+            label4.Text = "Sound";
+            // 
+            // label2
+            // 
+            label2.Font = new Font("Segoe UI", 10F);
+            label2.Location = new Point(54, 164);
+            label2.Name = "label2";
+            label2.Size = new Size(250, 40);
+            label2.TabIndex = 4;
+            label2.Text = "Timer Sound";
+            // 
+            // label3
+            // 
+            label3.Font = new Font("Segoe UI", 10F);
+            label3.Location = new Point(54, 219);
+            label3.Name = "label3";
+            label3.Size = new Size(250, 40);
+            label3.TabIndex = 5;
+            label3.Text = "Task reminder";
+            // 
+            // label5
+            // 
+            label5.Font = new Font("Segoe UI", 10F);
+            label5.Location = new Point(54, 291);
+            label5.Name = "label5";
+            label5.Size = new Size(188, 40);
+            label5.TabIndex = 6;
+            label5.Text = "User: Eugene";
+            // 
+            // button1
+            // 
+            button1.Location = new Point(54, 334);
+            button1.Name = "button1";
+            button1.Size = new Size(166, 35);
+            button1.TabIndex = 7;
+            button1.Text = "Change my pasword";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(237, 334);
+            button2.Name = "button2";
+            button2.Size = new Size(166, 35);
+            button2.TabIndex = 8;
+            button2.Text = "Sign out";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.Location = new Point(436, 334);
+            button3.Name = "button3";
+            button3.Size = new Size(166, 35);
+            button3.TabIndex = 9;
+            button3.Text = "Delete account";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(54, 388);
+            button4.Name = "button4";
+            button4.Size = new Size(166, 35);
+            button4.TabIndex = 10;
+            button4.Text = "Export data as JSON";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            label7.Font = new Font("Segoe UI", 10F);
+            label7.Location = new Point(54, 492);
+            label7.Name = "label7";
+            label7.Size = new Size(188, 33);
+            label7.TabIndex = 12;
+            label7.Text = "Version: 1.0.0";
+            // 
+            // label8
+            // 
+            label8.Font = new Font("Segoe UI", 10F);
+            label8.Location = new Point(54, 525);
+            label8.Name = "label8";
+            label8.Size = new Size(502, 33);
+            label8.TabIndex = 13;
+            label8.Text = "Developer: Eugene (A level NEA)";
+            // 
+            // trackBar2
+            // 
+            trackBar2.Location = new Point(253, 164);
+            trackBar2.Name = "trackBar2";
+            trackBar2.Size = new Size(130, 56);
+            trackBar2.TabIndex = 15;
+            // 
+            // trackBar3
+            // 
+            trackBar3.Location = new Point(253, 102);
+            trackBar3.Name = "trackBar3";
+            trackBar3.Size = new Size(130, 56);
+            trackBar3.TabIndex = 16;
+            // 
+            // checkBox1
+            // 
+            checkBox1.Location = new Point(257, 226);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(126, 30);
+            checkBox1.TabIndex = 17;
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(253, 55);
+            numericUpDown1.Maximum = new decimal(new int[] { 5, 0, 0, 0 });
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(150, 27);
+            numericUpDown1.TabIndex = 18;
             // 
             // SettingsPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(tableLayoutPanel1);
-            Controls.Add(panel1);
+            Controls.Add(numericUpDown1);
+            Controls.Add(checkBox1);
+            Controls.Add(trackBar3);
+            Controls.Add(trackBar2);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(button4);
+            Controls.Add(button3);
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(label5);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label4);
+            Controls.Add(label1);
             Name = "SettingsPage";
             Size = new Size(661, 577);
+            ((System.ComponentModel.ISupportInitialize)trackBar2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)trackBar3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private Panel panel1;
-        private TableLayoutPanel tableLayoutPanel1;
+        private Label label1;
+        private Label label4;
+        private Label label2;
+        private Label label3;
+        private Label label5;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button4;
+        private Label label7;
+        private Label label8;
+        private TrackBar trackBar2;
+        private TrackBar trackBar3;
+        private CheckBox checkBox1;
+        private NumericUpDown numericUpDown1;
     }
 }

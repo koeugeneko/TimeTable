@@ -1,5 +1,6 @@
 using System.Windows.Forms;
 using Npgsql;
+using TimeTable.UI;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TimeTable
@@ -7,30 +8,53 @@ namespace TimeTable
     public partial class Form1 : Form
     {
         LoginPage loginpage;
-        HomePage homePage;
+        ReportStatsPage reportStatsPage;
+        SettingsPage settingsPage;
+        SideBar sideBar;
+        SubjectLibaryPage subjectLibaryPage;
+        TaskLibaryPage taskLibaryPage;
+        TimerPage timerPage;
 
         public Form1()
         {
             InitializeComponent();
+
+            loginpage = new LoginPage(); // Initialise user controls
+            reportStatsPage = new ReportStatsPage();
+            settingsPage = new SettingsPage();
+            sideBar = new SideBar();
+            subjectLibaryPage = new SubjectLibaryPage();
+            taskLibaryPage = new TaskLibaryPage();
+            timerPage = new TimerPage();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            InitializeUserControls();
-            loadLoginPage();
+            LoadLoginPage();
+            LoadSideBar();
         }
 
-        private void InitializeUserControls()
+        private void LoadSideBar()  
         {
-            loginpage = new LoginPage(); // Create an instance of the login page
-            homePage = new HomePage();
+            panelSide.Controls.Clear();
+            sideBar.Dock = DockStyle.Fill;
+            panelSide.Controls.Add(sideBar);
+
+            sideBar.SettingButtonClicked += LoadSettingPage; //subscribe to when setting button in sidebar got click
         }
 
-        void loadLoginPage()  // requre the user to login before accessing the app
+        protected void LoadLoginPage()  // requre the user to login before accessing the app
         {
-            panelHome.Controls.Clear();
+            panelMain.Controls.Clear();
             loginpage.Dock = DockStyle.Fill;
-            panelHome.Controls.Add(loginpage);
+            panelMain.Controls.Add(loginpage);
+        }
+        public void LoadSettingPage()  // requre the user to login before accessing the app
+        {
+            panelMain.Controls.Clear();
+            settingsPage.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(settingsPage);
         }
     }
 }

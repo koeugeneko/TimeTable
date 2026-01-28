@@ -28,41 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panelHome = new Panel();
+            panelMain = new Panel();
             panelSide = new Panel();
             SuspendLayout();
             // 
-            // panelHome
+            // panelMain
             // 
-            panelHome.BackColor = Color.Gray;
-            panelHome.Dock = DockStyle.Fill;
-            panelHome.Location = new Point(180, 0);
-            panelHome.Margin = new Padding(4);
-            panelHome.Name = "panelHome";
-            panelHome.Size = new Size(822, 712);
-            panelHome.TabIndex = 0;
+            panelMain.BackColor = Color.Gray;
+            panelMain.Dock = DockStyle.Fill;
+            panelMain.Location = new Point(144, 0);
+            panelMain.Name = "panelMain";
+            panelMain.Size = new Size(661, 577);
+            panelMain.TabIndex = 0;
             // 
             // panelSide
             // 
             panelSide.BackColor = Color.FromArgb(88, 88, 88);
             panelSide.Dock = DockStyle.Left;
             panelSide.Location = new Point(0, 0);
-            panelSide.Margin = new Padding(4);
             panelSide.Name = "panelSide";
-            panelSide.Size = new Size(180, 712);
+            panelSide.Size = new Size(144, 577);
             panelSide.TabIndex = 1;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1002, 712);
-            Controls.Add(panelHome);
+            ClientSize = new Size(805, 577);
+            Controls.Add(panelMain);
             Controls.Add(panelSide);
-            Margin = new Padding(4);
             MaximizeBox = false;
-            MaximumSize = new Size(1024, 768);
-            MinimumSize = new Size(1024, 768);
+            MaximumSize = new Size(823, 624);
+            MinimumSize = new Size(823, 624);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "WinForms";
@@ -72,7 +69,7 @@
 
         #endregion
 
-        private Panel panelHome;
+        private Panel panelMain;
         private Panel panelSide;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TimeTable.UI
 {
-    partial class SubjectLibary
+    partial class SubjectLibaryPage
     {
         /// <summary> 
         /// Required designer variable.

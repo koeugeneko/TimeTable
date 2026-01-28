@@ -16,5 +16,27 @@ namespace TimeTable.UI
         {
             InitializeComponent();
         }
+
+        private void DailyTaskButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TaskLibaryButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReportStatButton_Click(object sender, EventArgs e)
+        {
+        }
+
+        public event Action SettingButtonClicked; //set up a event
+        private void SettingButton_Click(object sender, EventArgs e)
+        {
+            SettingButtonClicked?.Invoke(); //set up a event
+        }
+
+
     }
 }
