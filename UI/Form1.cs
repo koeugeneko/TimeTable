@@ -52,13 +52,13 @@ namespace TimeTable
 
         private void MinSideBar()
         {
-            if (panelSide.Width == 144)
+            if (panelSide.Width >= 150)
             {
-                panelSide.Width = 50;
+                panelSide.Width = 100;
             }
             else
             {
-                panelSide.Width = 144;
+                panelSide.Width = 150;
             }
         }
 
@@ -77,7 +77,6 @@ namespace TimeTable
             reportStatsPage.Dock = DockStyle.Fill;
             panelMain.Controls.Add(reportStatsPage);
             Debug.WriteLine("Report / Stats Page Loaded");
-
         }
 
         private void LoadSettingPage() 
