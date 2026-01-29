@@ -74,6 +74,7 @@ namespace TimeTable.Logic
             }
             // add salt to username password
 
+
             // convert to hex
             // output hash string
 

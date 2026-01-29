@@ -34,6 +34,7 @@
             lblLoginPassword = new Label();
             btnLoginLogin = new Button();
             chkRememberMe = new CheckBox();
+            label1 = new Label();
             SuspendLayout();
             // 
             // lblUsername
@@ -105,11 +106,22 @@
             chkRememberMe.UseVisualStyleBackColor = true;
             chkRememberMe.CheckedChanged += chkRememberMe_CheckedChanged;
             // 
+            // label1
+            // 
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Underline);
+            label1.Location = new Point(102, 340);
+            label1.Name = "label1";
+            label1.RightToLeft = RightToLeft.No;
+            label1.Size = new Size(63, 25);
+            label1.TabIndex = 6;
+            label1.Text = "Sign up";
+            // 
             // LoginPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Stretch;
+            Controls.Add(label1);
             Controls.Add(chkRememberMe);
             Controls.Add(btnLoginLogin);
             Controls.Add(txtPassword);
@@ -132,5 +144,6 @@
         private Label lblLoginPassword;
         private Button btnLoginLogin;
         private CheckBox chkRememberMe;
+        private Label label1;
     }
 }

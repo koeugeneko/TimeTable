@@ -49,41 +49,42 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(659, 348);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // SubjectColumn
             // 
+            SubjectColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             SubjectColumn.HeaderText = "Subject";
             SubjectColumn.MinimumWidth = 6;
             SubjectColumn.Name = "SubjectColumn";
-            SubjectColumn.Width = 110;
             // 
             // DescriptionCoulmn
             // 
+            DescriptionCoulmn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             DescriptionCoulmn.HeaderText = "Description";
             DescriptionCoulmn.MinimumWidth = 6;
             DescriptionCoulmn.Name = "DescriptionCoulmn";
-            DescriptionCoulmn.Width = 125;
             // 
             // EstimatedTimeColumn
             // 
+            EstimatedTimeColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             EstimatedTimeColumn.HeaderText = "Time";
             EstimatedTimeColumn.MinimumWidth = 6;
             EstimatedTimeColumn.Name = "EstimatedTimeColumn";
-            EstimatedTimeColumn.Width = 80;
             // 
             // DueDateColumn
             // 
+            DueDateColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             DueDateColumn.HeaderText = "Due Date";
             DueDateColumn.MinimumWidth = 6;
             DueDateColumn.Name = "DueDateColumn";
-            DueDateColumn.Width = 125;
             // 
             // PriorityColumn
             // 
+            PriorityColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             PriorityColumn.HeaderText = "Priority";
             PriorityColumn.MinimumWidth = 6;
             PriorityColumn.Name = "PriorityColumn";
-            PriorityColumn.Width = 125;
             // 
             // StatsColumn
             // 
