@@ -39,9 +39,10 @@
             // DailyTaskButton
             // 
             DailyTaskButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            DailyTaskButton.Location = new Point(3, 122);
+            DailyTaskButton.BackgroundImageLayout = ImageLayout.Zoom;
+            DailyTaskButton.Location = new Point(14, 102);
             DailyTaskButton.Name = "DailyTaskButton";
-            DailyTaskButton.Size = new Size(138, 78);
+            DailyTaskButton.Size = new Size(112, 90);
             DailyTaskButton.TabIndex = 0;
             DailyTaskButton.Text = "Daily task";
             DailyTaskButton.UseVisualStyleBackColor = true;
@@ -50,9 +51,11 @@
             // TaskLibaryButton
             // 
             TaskLibaryButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            TaskLibaryButton.Location = new Point(3, 217);
+            TaskLibaryButton.BackgroundImageLayout = ImageLayout.Zoom;
+            TaskLibaryButton.Location = new Point(14, 197);
             TaskLibaryButton.Name = "TaskLibaryButton";
-            TaskLibaryButton.Size = new Size(138, 72);
+            TaskLibaryButton.RightToLeft = RightToLeft.No;
+            TaskLibaryButton.Size = new Size(112, 90);
             TaskLibaryButton.TabIndex = 1;
             TaskLibaryButton.Text = "Task libary";
             TaskLibaryButton.UseVisualStyleBackColor = true;
@@ -61,9 +64,9 @@
             // SubjectLibaryButton
             // 
             SubjectLibaryButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            SubjectLibaryButton.Location = new Point(3, 306);
+            SubjectLibaryButton.Location = new Point(14, 286);
             SubjectLibaryButton.Name = "SubjectLibaryButton";
-            SubjectLibaryButton.Size = new Size(138, 72);
+            SubjectLibaryButton.Size = new Size(112, 90);
             SubjectLibaryButton.TabIndex = 2;
             SubjectLibaryButton.Text = "Subject libary";
             SubjectLibaryButton.UseVisualStyleBackColor = true;
@@ -72,20 +75,23 @@
             // ReportStatButton
             // 
             ReportStatButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            ReportStatButton.Location = new Point(3, 400);
+            ReportStatButton.BackgroundImageLayout = ImageLayout.Zoom;
+            ReportStatButton.Location = new Point(14, 380);
             ReportStatButton.Name = "ReportStatButton";
-            ReportStatButton.Size = new Size(138, 70);
+            ReportStatButton.RightToLeft = RightToLeft.No;
+            ReportStatButton.Size = new Size(112, 90);
             ReportStatButton.TabIndex = 3;
-            ReportStatButton.Text = "Reports / stats";
+            ReportStatButton.Text = "Stats";
             ReportStatButton.UseVisualStyleBackColor = true;
             ReportStatButton.Click += ReportStatButton_Click;
             // 
             // SettingButton
             // 
             SettingButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            SettingButton.Location = new Point(6, 491);
+            SettingButton.BackgroundImageLayout = ImageLayout.Zoom;
+            SettingButton.Location = new Point(14, 476);
             SettingButton.Name = "SettingButton";
-            SettingButton.Size = new Size(132, 66);
+            SettingButton.Size = new Size(112, 90);
             SettingButton.TabIndex = 4;
             SettingButton.Text = "Settings";
             SettingButton.UseVisualStyleBackColor = true;
@@ -94,9 +100,10 @@
             // MinSideBarButton
             // 
             MinSideBarButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            MinSideBarButton.Location = new Point(3, 23);
+            MinSideBarButton.BackgroundImageLayout = ImageLayout.Zoom;
+            MinSideBarButton.Location = new Point(14, 3);
             MinSideBarButton.Name = "MinSideBarButton";
-            MinSideBarButton.Size = new Size(138, 78);
+            MinSideBarButton.Size = new Size(112, 90);
             MinSideBarButton.TabIndex = 5;
             MinSideBarButton.Text = ". . .";
             MinSideBarButton.UseVisualStyleBackColor = true;

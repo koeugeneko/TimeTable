@@ -9,9 +9,10 @@ namespace TimeTable
     public partial class Form1 : Form
     {
         LoginPage loginpage;
+        SideBar sideBar;
+        DailyTaskPage dailyTaskPage;
         ReportStatsPage reportStatsPage;
         SettingsPage settingsPage;
-        SideBar sideBar;
         SubjectLibaryPage subjectLibaryPage;
         TaskLibaryPage taskLibaryPage;
         TimerPage timerPage;
@@ -42,6 +43,7 @@ namespace TimeTable
             panelSide.Controls.Add(sideBar);
 
             sideBar.MinSideBarButtonClicked += MinSideBar; //subscribe to when setting button in sidebar got click
+            sideBar.DailyTaskButtonClicked += loadTimerPage;
             sideBar.ReportStatButtonClicked += LoadReportStatsPage;
             sideBar.SettingButtonClicked += LoadSettingPage;
             sideBar.SubjectLibaryButtonClicked += LoadSubjectLibaryPage;
