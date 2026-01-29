@@ -72,21 +72,24 @@ namespace TimeTable.Logic
 
             return true;*/
         }
-        public void HashPassword(string password)
+        public string HashPassword(string username, string password)
         {
+            int iterations = 2;
             int saltLength = 16;
-            byte[] salt = new byte[saltLength];
+            string salt = GenerateSalt(saltLength);
 
+            string plaintext = username + password + salt;
 
-            // get salt form username and passowrd 
-            for (int i = 0; i < password.Length / 2; i++) // run the genrate salt with password length/2 times
+            for (int i = 0; i < iterations; i++) // run ahash a few times
             {
+                int hash = 0;
+                foreach(char c in plaintext)
+                {
+                    hash += ((int)c * (i + 1)) ^ (i + 7); // ASCII + postion + XOR
+                }
+                plaintext = hash.ToString();
             }
-            // add salt to username password
-
-
-            // convert to hex
-            // output hash string
+            return plaintext;
 
         }
 
