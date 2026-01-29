@@ -17,26 +17,40 @@ namespace TimeTable.UI
             InitializeComponent();
         }
 
+        public event Action DailyTaskButtonClicked; //set up a event
         private void DailyTaskButton_Click(object sender, EventArgs e)
         {
-
+            DailyTaskButtonClicked?.Invoke();
         }
 
+        public event Action TaskLibaryButtonClicked;
         private void TaskLibaryButton_Click(object sender, EventArgs e)
         {
-
+            TaskLibaryButtonClicked?.Invoke();
         }
 
+        public event Action SubjectLibaryButtonClicked;
+        private void SubjectLibaryButton_Click(object sender, EventArgs e)
+        {
+            SubjectLibaryButtonClicked?.Invoke();
+        }
+
+        public event Action ReportStatButtonClicked;
         private void ReportStatButton_Click(object sender, EventArgs e)
         {
+            ReportStatButtonClicked?.Invoke();
         }
 
-        public event Action SettingButtonClicked; //set up a event
+        public event Action SettingButtonClicked;
         private void SettingButton_Click(object sender, EventArgs e)
         {
-            SettingButtonClicked?.Invoke(); //set up a event
+            SettingButtonClicked?.Invoke();
         }
 
-
+        public event Action MinSideBarButtonClicked;
+        private void MinSideBarButton_Click(object sender, EventArgs e)
+        {
+            MinSideBarButtonClicked?.Invoke();
+        }
     }
 }

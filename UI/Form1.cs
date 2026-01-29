@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Windows.Forms;
 using Npgsql;
 using TimeTable.UI;
@@ -26,7 +27,6 @@ namespace TimeTable
             subjectLibaryPage = new SubjectLibaryPage();
             taskLibaryPage = new TaskLibaryPage();
             timerPage = new TimerPage();
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,20 +41,71 @@ namespace TimeTable
             sideBar.Dock = DockStyle.Fill;
             panelSide.Controls.Add(sideBar);
 
-            sideBar.SettingButtonClicked += LoadSettingPage; //subscribe to when setting button in sidebar got click
+            sideBar.MinSideBarButtonClicked += MinSideBar; //subscribe to when setting button in sidebar got click
+            sideBar.ReportStatButtonClicked += LoadReportStatsPage;
+            sideBar.SettingButtonClicked += LoadSettingPage;
+            sideBar.SubjectLibaryButtonClicked += LoadSubjectLibaryPage;
+            sideBar.TaskLibaryButtonClicked += LoadTaskLibaryPage;
         }
 
-        protected void LoadLoginPage()  // requre the user to login before accessing the app
+        private void MinSideBar()
+        {
+            if (panelSide.Width == 144)
+            {
+                panelSide.Width = 50;
+            }
+            else
+            {
+                panelSide.Width = 144;
+            }
+        }
+
+
+        private void LoadLoginPage()  // requre the user to login before accessing the app
         {
             panelMain.Controls.Clear();
             loginpage.Dock = DockStyle.Fill;
             panelMain.Controls.Add(loginpage);
+            Debug.WriteLine("Login Page Loaded");
         }
-        public void LoadSettingPage()  // requre the user to login before accessing the app
+
+        private void LoadReportStatsPage()
+        {
+            panelMain.Controls.Clear();
+            reportStatsPage.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(reportStatsPage);
+            Debug.WriteLine("Report / Stats Page Loaded");
+
+        }
+
+        private void LoadSettingPage() 
         {
             panelMain.Controls.Clear();
             settingsPage.Dock = DockStyle.Fill;
             panelMain.Controls.Add(settingsPage);
         }
+
+        private void LoadSubjectLibaryPage()
+        {
+            panelMain.Controls.Clear();
+            subjectLibaryPage.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(subjectLibaryPage);
+        }
+
+        private void LoadTaskLibaryPage()
+        {
+            panelMain.Controls.Clear();
+            taskLibaryPage.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(taskLibaryPage);
+        }
+
+        private void loadTimerPage()
+        {
+            panelMain.Controls.Clear();
+            timerPage.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(timerPage);
+        }
+
+        
     }
 }

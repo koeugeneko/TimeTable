@@ -28,17 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dataGridView1 = new DataGridView();
+            SubjectNameColumn = new DataGridViewTextBoxColumn();
+            AddNewSubject = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // SubjectLibary
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { SubjectNameColumn });
+            dataGridView1.Location = new Point(74, 85);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(503, 359);
+            dataGridView1.TabIndex = 0;
+            // 
+            // SubjectNameColumn
+            // 
+            SubjectNameColumn.HeaderText = "Subject name";
+            SubjectNameColumn.MinimumWidth = 6;
+            SubjectNameColumn.Name = "SubjectNameColumn";
+            SubjectNameColumn.Width = 200;
+            // 
+            // AddNewSubject
+            // 
+            AddNewSubject.Location = new Point(164, 478);
+            AddNewSubject.Name = "AddNewSubject";
+            AddNewSubject.Size = new Size(326, 55);
+            AddNewSubject.TabIndex = 1;
+            AddNewSubject.Text = "Add new subject";
+            AddNewSubject.UseVisualStyleBackColor = true;
+            // 
+            // SubjectLibaryPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Name = "SubjectLibary";
+            Controls.Add(AddNewSubject);
+            Controls.Add(dataGridView1);
+            Name = "SubjectLibaryPage";
             Size = new Size(661, 577);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn SubjectNameColumn;
+        private Button AddNewSubject;
     }
 }
