@@ -18,7 +18,7 @@ namespace TimeTable.Logic
             this.password = password;
         }
 
-        userId = 
+        //userId = 
         
     }
 }

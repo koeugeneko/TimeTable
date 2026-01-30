@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -65,6 +66,27 @@ namespace TimeTable
         private void labelSignUp_Click(object sender, EventArgs e)
         {
             SignUpClicked?.Invoke();
+        }
+
+        Font originalFont;
+        private void labelSignUp_MouseEnter(object sender, EventArgs e)
+        {
+            if (originalFont == null)
+                originalFont = labelSignUp.Font;
+
+            labelSignUp.Font = new Font(originalFont, FontStyle.Underline); // underline animation when mouse hover
+            labelSignUp.ForeColor = Color.Blue;
+            labelSignUp.Cursor = Cursors.Hand;
+        }
+
+        private void labelSignUp_MouseLeave(object sender, EventArgs e)
+        {
+            if (originalFont != null)
+            {
+                labelSignUp.Font = originalFont;
+                labelSignUp.ForeColor = SystemColors.ControlText;
+                labelSignUp.Cursor = Cursors.Default;
+            }
         }
     }
 }

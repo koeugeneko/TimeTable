@@ -104,7 +104,6 @@
             // 
             // MinSideBarButton
             // 
-            MinSideBarButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             MinSideBarButton.BackgroundImageLayout = ImageLayout.Zoom;
             MinSideBarButton.Location = new Point(18, 0);
             MinSideBarButton.Margin = new Padding(4);
@@ -119,12 +118,12 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(MinSideBarButton);
             Controls.Add(SettingButton);
             Controls.Add(ReportStatButton);
             Controls.Add(SubjectLibaryButton);
             Controls.Add(TaskLibaryButton);
             Controls.Add(DailyTaskButton);
+            Controls.Add(MinSideBarButton);
             Margin = new Padding(2);
             Name = "SideBar";
             Size = new Size(150, 712);

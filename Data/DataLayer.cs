@@ -13,7 +13,7 @@ namespace TimeTable.Data
 
         public static void CreatUser()
         {
-            string sql = @"SELECT"
+            string sql = @"CREATE user";
         }
 
         public static void GetHashedPasswordFromDatabse()
@@ -21,7 +21,7 @@ namespace TimeTable.Data
             string sql = @"SELECT hashed_password FROM UserPasswords, User JOIN Where Users.user_id = UserPasswords.user_id AND "; //TODO
         }
 
-        public static List<Task> GetTasksFromDatabase()
+        public static void GetTasksFromDatabase()
         {
             string sql = $@"SELECT task_id, description, priority, estimated_min FROM tasks WHERE completed = false AND DueDate >= {TimeOnly.FromDateTime(DateTime.Now)}";
         }

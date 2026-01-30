@@ -45,6 +45,7 @@ namespace TimeTable
             panelSide.Controls.Add(sideBar);
 
             sideBar.MinSideBarButtonClicked += MinSideBar; //subscribe to when setting button in sidebar got click
+            loginpage.SignUpClicked += LoadSignUpPage;
             sideBar.DailyTaskButtonClicked += loadTimerPage;
             sideBar.ReportStatButtonClicked += LoadReportStatsPage;
             sideBar.SettingButtonClicked += LoadSettingPage;
@@ -76,9 +77,9 @@ namespace TimeTable
         private void LoadSignUpPage()
         {
             panelMain.Controls.Clear();
-            loginpage.Dock = DockStyle.Fill;
-            panelMain.Controls.Add(loginpage);
-            Debug.WriteLine("Login Page Loaded");
+            SignUpPage.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(SignUpPage);
+            Debug.WriteLine("Sign Up Page Loaded");
         }
 
         private void LoadReportStatsPage()

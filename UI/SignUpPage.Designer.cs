@@ -44,7 +44,7 @@
             txtPassword.BackColor = Color.White;
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
             txtPassword.ForeColor = Color.Silver;
-            txtPassword.Location = new Point(82, 318);
+            txtPassword.Location = new Point(133, 249);
             txtPassword.Margin = new Padding(4);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(501, 31);
@@ -56,7 +56,7 @@
             lblLoginPassword.AutoSize = true;
             lblLoginPassword.FlatStyle = FlatStyle.Flat;
             lblLoginPassword.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblLoginPassword.Location = new Point(73, 274);
+            lblLoginPassword.Location = new Point(124, 205);
             lblLoginPassword.Margin = new Padding(4, 0, 4, 0);
             lblLoginPassword.Name = "lblLoginPassword";
             lblLoginPassword.Size = new Size(205, 38);
@@ -68,7 +68,7 @@
             txtUsername.BackColor = Color.White;
             txtUsername.BorderStyle = BorderStyle.FixedSingle;
             txtUsername.ForeColor = Color.Silver;
-            txtUsername.Location = new Point(84, 193);
+            txtUsername.Location = new Point(135, 124);
             txtUsername.Margin = new Padding(4);
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(501, 31);
@@ -80,7 +80,7 @@
             lblUsername.AutoSize = true;
             lblUsername.FlatStyle = FlatStyle.Flat;
             lblUsername.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUsername.Location = new Point(84, 140);
+            lblUsername.Location = new Point(135, 71);
             lblUsername.Margin = new Padding(4, 0, 4, 0);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(211, 38);
@@ -92,7 +92,7 @@
             textBox1.BackColor = Color.White;
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.ForeColor = Color.Silver;
-            textBox1.Location = new Point(82, 426);
+            textBox1.Location = new Point(133, 357);
             textBox1.Margin = new Padding(4);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(501, 31);
@@ -104,7 +104,7 @@
             label2.AutoSize = true;
             label2.FlatStyle = FlatStyle.Flat;
             label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(73, 508);
+            label2.Location = new Point(124, 439);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(155, 38);
@@ -116,7 +116,7 @@
             label1.AutoSize = true;
             label1.FlatStyle = FlatStyle.Flat;
             label1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(73, 384);
+            label1.Location = new Point(124, 315);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
             label1.Size = new Size(279, 38);
@@ -128,7 +128,7 @@
             textBox2.BackColor = Color.White;
             textBox2.BorderStyle = BorderStyle.FixedSingle;
             textBox2.ForeColor = Color.Silver;
-            textBox2.Location = new Point(84, 550);
+            textBox2.Location = new Point(135, 481);
             textBox2.Margin = new Padding(4);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(501, 31);
@@ -139,7 +139,7 @@
             // 
             btnLoginLogin.BackColor = Color.White;
             btnLoginLogin.FlatStyle = FlatStyle.Flat;
-            btnLoginLogin.Location = new Point(328, 630);
+            btnLoginLogin.Location = new Point(379, 561);
             btnLoginLogin.Margin = new Padding(4);
             btnLoginLogin.Name = "btnLoginLogin";
             btnLoginLogin.Size = new Size(255, 65);

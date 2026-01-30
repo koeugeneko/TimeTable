@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace TimeTable.Logic
 {
-    internal class Task
+    public class Task
     {
         string name { get; set; }
         string subject { get; set; }
         int prioirty { get; set; }
         DateOnly dueDate { get; set; }
 
-        Task()
+        public Task()
         { 
         }
 

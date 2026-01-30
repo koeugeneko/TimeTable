@@ -30,39 +30,50 @@
         {
             panelMain = new Panel();
             panelSide = new Panel();
+            panel1 = new Panel();
             SuspendLayout();
             // 
             // panelMain
             // 
             panelMain.BackColor = Color.Gray;
             panelMain.Dock = DockStyle.Fill;
-            panelMain.Location = new Point(150, 0);
+            panelMain.Location = new Point(150, 40);
             panelMain.Margin = new Padding(4);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(852, 712);
+            panelMain.Size = new Size(874, 748);
             panelMain.TabIndex = 0;
             // 
             // panelSide
             // 
-            panelSide.BackColor = Color.FromArgb(88, 88, 88);
+            panelSide.BackColor = Color.DimGray;
             panelSide.Dock = DockStyle.Left;
-            panelSide.Location = new Point(0, 0);
+            panelSide.Location = new Point(0, 40);
             panelSide.Margin = new Padding(4);
             panelSide.Name = "panelSide";
-            panelSide.Size = new Size(150, 712);
+            panelSide.Size = new Size(150, 748);
             panelSide.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1024, 40);
+            panel1.TabIndex = 0;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1002, 712);
+            ClientSize = new Size(1024, 788);
             Controls.Add(panelMain);
             Controls.Add(panelSide);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(4);
             MaximizeBox = false;
-            MaximumSize = new Size(1024, 768);
-            MinimumSize = new Size(1024, 768);
+            MaximumSize = new Size(1024, 788);
+            MinimumSize = new Size(1024, 788);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "WinForms";
@@ -74,5 +85,6 @@
 
         private Panel panelMain;
         private Panel panelSide;
+        private Panel panel1;
     }
 }

@@ -114,7 +114,7 @@
             // 
             // labelSignUp
             // 
-            labelSignUp.Font = new Font("Segoe UI", 9F, FontStyle.Underline);
+            labelSignUp.Font = new Font("Segoe UI", 9F);
             labelSignUp.Location = new Point(126, 461);
             labelSignUp.Margin = new Padding(4, 0, 4, 0);
             labelSignUp.Name = "labelSignUp";
@@ -123,6 +123,8 @@
             labelSignUp.TabIndex = 6;
             labelSignUp.Text = "Sign up";
             labelSignUp.Click += labelSignUp_Click;
+            labelSignUp.MouseEnter += labelSignUp_MouseEnter;
+            labelSignUp.MouseLeave += labelSignUp_MouseLeave;
             // 
             // LoginPage
             // 

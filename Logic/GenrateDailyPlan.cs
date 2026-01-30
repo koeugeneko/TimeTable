@@ -9,9 +9,9 @@ namespace TimeTable.Logic
 {
     internal class GenrateDailyPlan
     {
-        Task task1 = new Task("asdf", "asdf");
+        Task task1 = new Task();
 
-        List<Task> tasks = DataLayer.GetTasksFromDatabase();
+        //List<Task> tasks = DataLayer.GetTasksFromDatabase();
 
         LinkedList<Task> todaysTasks = new LinkedList<Task>();
 
