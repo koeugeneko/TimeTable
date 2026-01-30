@@ -9,6 +9,7 @@ namespace TimeTable
     public partial class Form1 : Form
     {
         LoginPage loginpage;
+        SignUpPage SignUpPage;
         SideBar sideBar;
         DailyTaskPage dailyTaskPage;
         ReportStatsPage reportStatsPage;
@@ -22,6 +23,7 @@ namespace TimeTable
             InitializeComponent();
 
             loginpage = new LoginPage(); // Initialise user controls
+            SignUpPage = new SignUpPage();
             reportStatsPage = new ReportStatsPage();
             settingsPage = new SettingsPage();
             sideBar = new SideBar();
@@ -64,6 +66,14 @@ namespace TimeTable
 
 
         private void LoadLoginPage()  // requre the user to login before accessing the app
+        {
+            panelMain.Controls.Clear();
+            loginpage.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(loginpage);
+            Debug.WriteLine("Login Page Loaded");
+        }
+
+        private void LoadSignUpPage()
         {
             panelMain.Controls.Clear();
             loginpage.Dock = DockStyle.Fill;

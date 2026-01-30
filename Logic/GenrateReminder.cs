@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace TimeTable.Logic
 {
-    internal class Subject
+    internal class GenrateReminder
     {
-        string name { get; set; }
-        int prioirty { get; set; }
+        Queue<string> reminder = new Queue<string>();
 
     }
 }

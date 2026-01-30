@@ -9,7 +9,6 @@ namespace TimeTable.Logic
 {
     internal class AuthService
     {
-        
 
         public bool ValidateUsername(string username)
         {

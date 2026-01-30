@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TimeTable.Data;
 
 namespace TimeTable.Logic
 {
     internal class GenrateDailyPlan
     {
+        Task task1 = new Task("asdf", "asdf");
+
+        List<Task> tasks = DataLayer.GetTasksFromDatabase();
+
+        LinkedList<Task> todaysTasks = new LinkedList<Task>();
+
     }
 }

@@ -8,12 +8,14 @@ namespace TimeTable.Logic
 {
     internal class Task
     {
-        public string taskName { get; set; }
-        public string taskSubject { get; set; }
-        public Task(string taskName, string taskSubject)
-        {
-            this.taskName = taskName;
-            this.taskSubject = taskSubject;
+        string name { get; set; }
+        string subject { get; set; }
+        int prioirty { get; set; }
+        DateOnly dueDate { get; set; }
+
+        Task()
+        { 
         }
+
     }
 }

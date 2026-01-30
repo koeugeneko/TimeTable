@@ -39,28 +39,32 @@ namespace TimeTable
             }
         }
 
-        public event Action goToHomePage;
         private void btnLoginLogin_Click(object sender, EventArgs e)
         {
             //sould add a loading screen here
             username = txtUsername.Text;
             password = txtPassword.Text;
 
-            goToHomePage?.Invoke(); // Trigger the event to notify that login is successful
         }
 
         private void LoginPage_Load(object sender, EventArgs e)
         {
-            // Set focus to the username label when login page loads - workaround for text box focus issue
+            /*// Set focus to the username label when login page loads - workaround for text box focus issue
             this.BeginInvoke(new Action(() =>
             {
                 lblUsername.Focus();
-            }));
+            }));*/
         }
 
         private void chkRememberMe_CheckedChanged(object sender, EventArgs e)
         {
             // need to save username and password to local storage // add a autofill funtion here
+        }
+
+        public Action SignUpClicked;
+        private void labelSignUp_Click(object sender, EventArgs e)
+        {
+            SignUpClicked?.Invoke();
         }
     }
 }

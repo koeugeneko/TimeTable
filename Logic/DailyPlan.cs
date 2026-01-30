@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace TimeTable.Logic
 {
-    internal class Subject
+    internal class DailyPlan
     {
-        string name { get; set; }
-        int prioirty { get; set; }
-
     }
 }
