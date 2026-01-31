@@ -35,41 +35,41 @@
             // 
             // panelMain
             // 
-            panelMain.BackColor = Color.Gray;
+            panelMain.BackColor = Color.Transparent;
             panelMain.Dock = DockStyle.Fill;
-            panelMain.Location = new Point(150, 40);
+            panelMain.Location = new Point(150, 0);
             panelMain.Margin = new Padding(4);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(874, 748);
+            panelMain.Size = new Size(852, 732);
             panelMain.TabIndex = 0;
             // 
             // panelSide
             // 
-            panelSide.BackColor = Color.DimGray;
+            panelSide.BackColor = Color.Gray;
             panelSide.Dock = DockStyle.Left;
-            panelSide.Location = new Point(0, 40);
+            panelSide.Location = new Point(0, 0);
             panelSide.Margin = new Padding(4);
             panelSide.Name = "panelSide";
-            panelSide.Size = new Size(150, 748);
+            panelSide.Size = new Size(150, 732);
             panelSide.TabIndex = 1;
             // 
             // panel1
             // 
-            panel1.Dock = DockStyle.Top;
+            panel1.BackColor = Color.Gray;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1024, 40);
+            panel1.Size = new Size(150, 40);
             panel1.TabIndex = 0;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1024, 788);
+            ClientSize = new Size(1002, 732);
             Controls.Add(panelMain);
-            Controls.Add(panelSide);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
+            Controls.Add(panelSide);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4);
             MaximizeBox = false;
             MaximumSize = new Size(1024, 788);
