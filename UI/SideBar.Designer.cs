@@ -33,17 +33,15 @@
             SubjectLibaryButton = new Button();
             ReportStatButton = new Button();
             SettingButton = new Button();
-            MinSideBarButton = new Button();
             SuspendLayout();
             // 
             // DailyTaskButton
             // 
             DailyTaskButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             DailyTaskButton.BackgroundImageLayout = ImageLayout.Zoom;
-            DailyTaskButton.Location = new Point(18, 124);
-            DailyTaskButton.Margin = new Padding(4);
+            DailyTaskButton.Location = new Point(14, 35);
             DailyTaskButton.Name = "DailyTaskButton";
-            DailyTaskButton.Size = new Size(110, 112);
+            DailyTaskButton.Size = new Size(118, 90);
             DailyTaskButton.TabIndex = 0;
             DailyTaskButton.Text = "Daily task";
             DailyTaskButton.UseVisualStyleBackColor = true;
@@ -53,11 +51,10 @@
             // 
             TaskLibaryButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             TaskLibaryButton.BackgroundImageLayout = ImageLayout.Zoom;
-            TaskLibaryButton.Location = new Point(18, 242);
-            TaskLibaryButton.Margin = new Padding(4);
+            TaskLibaryButton.Location = new Point(14, 151);
             TaskLibaryButton.Name = "TaskLibaryButton";
             TaskLibaryButton.RightToLeft = RightToLeft.No;
-            TaskLibaryButton.Size = new Size(110, 112);
+            TaskLibaryButton.Size = new Size(118, 90);
             TaskLibaryButton.TabIndex = 1;
             TaskLibaryButton.Text = "Task libary";
             TaskLibaryButton.UseVisualStyleBackColor = true;
@@ -66,10 +63,9 @@
             // SubjectLibaryButton
             // 
             SubjectLibaryButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            SubjectLibaryButton.Location = new Point(18, 354);
-            SubjectLibaryButton.Margin = new Padding(4);
+            SubjectLibaryButton.Location = new Point(14, 264);
             SubjectLibaryButton.Name = "SubjectLibaryButton";
-            SubjectLibaryButton.Size = new Size(110, 112);
+            SubjectLibaryButton.Size = new Size(118, 90);
             SubjectLibaryButton.TabIndex = 2;
             SubjectLibaryButton.Text = "Subject libary";
             SubjectLibaryButton.UseVisualStyleBackColor = true;
@@ -79,11 +75,10 @@
             // 
             ReportStatButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             ReportStatButton.BackgroundImageLayout = ImageLayout.Zoom;
-            ReportStatButton.Location = new Point(18, 471);
-            ReportStatButton.Margin = new Padding(4);
+            ReportStatButton.Location = new Point(14, 379);
             ReportStatButton.Name = "ReportStatButton";
             ReportStatButton.RightToLeft = RightToLeft.No;
-            ReportStatButton.Size = new Size(110, 112);
+            ReportStatButton.Size = new Size(118, 90);
             ReportStatButton.TabIndex = 3;
             ReportStatButton.Text = "Stats";
             ReportStatButton.UseVisualStyleBackColor = true;
@@ -93,40 +88,26 @@
             // 
             SettingButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             SettingButton.BackgroundImageLayout = ImageLayout.Zoom;
-            SettingButton.Location = new Point(18, 591);
-            SettingButton.Margin = new Padding(4);
+            SettingButton.Location = new Point(14, 503);
             SettingButton.Name = "SettingButton";
-            SettingButton.Size = new Size(110, 112);
+            SettingButton.Size = new Size(118, 90);
             SettingButton.TabIndex = 4;
             SettingButton.Text = "Settings";
             SettingButton.UseVisualStyleBackColor = true;
             SettingButton.Click += SettingButton_Click;
             // 
-            // MinSideBarButton
-            // 
-            MinSideBarButton.BackgroundImageLayout = ImageLayout.Zoom;
-            MinSideBarButton.Location = new Point(18, 0);
-            MinSideBarButton.Margin = new Padding(4);
-            MinSideBarButton.Name = "MinSideBarButton";
-            MinSideBarButton.Size = new Size(110, 112);
-            MinSideBarButton.TabIndex = 5;
-            MinSideBarButton.Text = ". . .";
-            MinSideBarButton.UseVisualStyleBackColor = true;
-            MinSideBarButton.Click += MinSideBarButton_Click;
-            // 
             // SideBar
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(SettingButton);
             Controls.Add(ReportStatButton);
             Controls.Add(SubjectLibaryButton);
             Controls.Add(TaskLibaryButton);
             Controls.Add(DailyTaskButton);
-            Controls.Add(MinSideBarButton);
             Margin = new Padding(2);
             Name = "SideBar";
-            Size = new Size(150, 712);
+            Size = new Size(150, 621);
             ResumeLayout(false);
         }
 
@@ -137,6 +118,5 @@
         private Button SubjectLibaryButton;
         private Button ReportStatButton;
         private Button SettingButton;
-        private Button MinSideBarButton;
     }
 }

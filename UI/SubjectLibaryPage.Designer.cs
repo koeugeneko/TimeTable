@@ -38,10 +38,10 @@
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { SubjectNameColumn });
-            dataGridView1.Location = new Point(74, 85);
+            dataGridView1.Location = new Point(40, 107);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(503, 359);
+            dataGridView1.Size = new Size(760, 359);
             dataGridView1.TabIndex = 0;
             // 
             // SubjectNameColumn
@@ -53,9 +53,9 @@
             // 
             // AddNewSubject
             // 
-            AddNewSubject.Location = new Point(164, 478);
+            AddNewSubject.Location = new Point(130, 500);
             AddNewSubject.Name = "AddNewSubject";
-            AddNewSubject.Size = new Size(326, 55);
+            AddNewSubject.Size = new Size(583, 55);
             AddNewSubject.TabIndex = 1;
             AddNewSubject.Text = "Add new subject";
             AddNewSubject.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@
             Controls.Add(AddNewSubject);
             Controls.Add(dataGridView1);
             Name = "SubjectLibaryPage";
-            Size = new Size(661, 577);
+            Size = new Size(856, 721);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }

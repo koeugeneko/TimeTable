@@ -47,10 +47,5 @@ namespace TimeTable.UI
             SettingButtonClicked?.Invoke();
         }
 
-        public event Action MinSideBarButtonClicked;
-        private void MinSideBarButton_Click(object sender, EventArgs e)
-        {
-            MinSideBarButtonClicked?.Invoke();
-        }
     }
 }

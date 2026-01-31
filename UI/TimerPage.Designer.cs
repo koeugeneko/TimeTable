@@ -37,7 +37,7 @@
             // label1
             // 
             label1.Font = new Font("Segoe UI", 80F);
-            label1.Location = new Point(135, 116);
+            label1.Location = new Point(224, 180);
             label1.Name = "label1";
             label1.Size = new Size(400, 180);
             label1.TabIndex = 0;
@@ -46,7 +46,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 30F);
-            button1.Location = new Point(100, 433);
+            button1.Location = new Point(189, 497);
             button1.Name = "button1";
             button1.Size = new Size(180, 98);
             button1.TabIndex = 1;
@@ -56,7 +56,7 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 30F);
-            button2.Location = new Point(394, 433);
+            button2.Location = new Point(483, 497);
             button2.Name = "button2";
             button2.Size = new Size(180, 98);
             button2.TabIndex = 2;
@@ -66,7 +66,7 @@
             // button3
             // 
             button3.Font = new Font("Segoe UI", 20F);
-            button3.Location = new Point(239, 353);
+            button3.Location = new Point(328, 417);
             button3.Name = "button3";
             button3.Size = new Size(217, 54);
             button3.TabIndex = 3;
@@ -82,7 +82,7 @@
             Controls.Add(button1);
             Controls.Add(label1);
             Name = "TimerPage";
-            Size = new Size(661, 577);
+            Size = new Size(856, 721);
             ResumeLayout(false);
         }
 

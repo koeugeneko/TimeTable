@@ -1,6 +1,6 @@
 ﻿namespace TimeTable.UI
 {
-    partial class ReportStatsPage
+    partial class SideBarTop
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,17 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            minSideBarButton = new Button();
             SuspendLayout();
             // 
-            // ReportStatsPage
+            // minSideBarButton
+            // 
+            minSideBarButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            minSideBarButton.Location = new Point(17, 10);
+            minSideBarButton.Name = "minSideBarButton";
+            minSideBarButton.Size = new Size(118, 70);
+            minSideBarButton.TabIndex = 0;
+            minSideBarButton.Text = ". . .";
+            minSideBarButton.UseVisualStyleBackColor = true;
+            minSideBarButton.Click += minSideBarButton_Click_1;
+            // 
+            // SideBarTop
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Name = "ReportStatsPage";
-            Size = new Size(856, 721);
+            Controls.Add(minSideBarButton);
+            Name = "SideBarTop";
+            Size = new Size(150, 100);
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button minSideBarButton;
     }
 }

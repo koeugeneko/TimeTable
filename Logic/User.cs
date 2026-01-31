@@ -8,8 +8,9 @@ namespace TimeTable.Logic
 {
     internal class User
     {
-        string username { get; set; }
-        string password { get; set; }
+        public string username { get; set; }
+        public string password { get; set; }
+        public string email { get; set; }
         int userId { get; set; }
 
         public User(string username, string password)

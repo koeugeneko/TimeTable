@@ -7,10 +7,25 @@ using System.Threading.Tasks;
 
 namespace TimeTable.Logic
 {
-    internal class AuthService
-    {
+    internal static class AuthService
+    {   
+        public static bool SignUp(string username, string password, string email)
+        {
+            User user = new User(username, password);
+            if (!ValidateUsername(username)) return false;
+            if (!ValidatePassowrd(password)) return false;
+            if (!ValidateEmail(email)) return false;
+            return true;
+        }
 
-        public bool ValidateUsername(string username)
+        public static bool Login(string username, string password)
+        {   
+            User user = new User(username, password);
+            
+            return true;
+        }
+
+        public static bool ValidateUsername(string username)
         {
             if (string.IsNullOrEmpty(username)) return false; // check if username is empty
 
@@ -23,13 +38,12 @@ namespace TimeTable.Logic
             }
             return true;*/
         }
-        public bool ValidateEmail(string email)
+        public static bool ValidateEmail(string email)
         {
             string pattern = @"^[\w\.-]+@[\w\.-]+\.\w+$";
             return Regex.IsMatch(email, pattern);
         }
-
-        public bool ValidatePassowrd(string password)
+        public static bool ValidatePassowrd(string password)
         {
             if (string.IsNullOrEmpty(password)) return false; // check if password is empty
 
@@ -71,7 +85,7 @@ namespace TimeTable.Logic
 
             return true;*/
         }
-        public string HashPassword(string username, string password)
+        public static string HashPassword(string username, string password)
         {
             int iterations = 2;
             int saltLength = 16;
@@ -82,7 +96,7 @@ namespace TimeTable.Logic
             for (int i = 0; i < iterations; i++) // run ahash a few times
             {
                 int hash = 0;
-                foreach(char c in plaintext)
+                foreach (char c in plaintext)
                 {
                     hash += ((int)c * (i + 1)) ^ (i + 7); // ASCII + postion + XOR
                 }
@@ -91,8 +105,7 @@ namespace TimeTable.Logic
             return plaintext;
 
         }
-
-        public string GenerateSalt(int saltLength)
+        public static string GenerateSalt(int saltLength)
         {
             var rng = new Random();
             char[] chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789".ToCharArray();
@@ -101,6 +114,8 @@ namespace TimeTable.Logic
                 salt[i] = chars[rng.Next(chars.Length)];
             return new string(salt);
         }
+
+        //public static 
 
     }
 }

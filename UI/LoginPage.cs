@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Microsoft.VisualBasic.Logging;
+using TimeTable.Logic; 
 
 namespace TimeTable
 {
@@ -45,11 +37,11 @@ namespace TimeTable
             //sould add a loading screen here
             username = txtUsername.Text;
             password = txtPassword.Text;
-
+            AuthService.Login(username, password);
         }
 
         private void LoginPage_Load(object sender, EventArgs e)
-        {
+        {   
             /*// Set focus to the username label when login page loads - workaround for text box focus issue
             this.BeginInvoke(new Action(() =>
             {

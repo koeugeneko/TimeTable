@@ -60,7 +60,7 @@
             // label4
             // 
             label4.Font = new Font("Segoe UI", 10F);
-            label4.Location = new Point(54, 107);
+            label4.Location = new Point(54, 197);
             label4.Name = "label4";
             label4.Size = new Size(250, 40);
             label4.TabIndex = 3;
@@ -69,7 +69,7 @@
             // label2
             // 
             label2.Font = new Font("Segoe UI", 10F);
-            label2.Location = new Point(54, 164);
+            label2.Location = new Point(54, 254);
             label2.Name = "label2";
             label2.Size = new Size(250, 40);
             label2.TabIndex = 4;
@@ -78,7 +78,7 @@
             // label3
             // 
             label3.Font = new Font("Segoe UI", 10F);
-            label3.Location = new Point(54, 219);
+            label3.Location = new Point(54, 309);
             label3.Name = "label3";
             label3.Size = new Size(250, 40);
             label3.TabIndex = 5;
@@ -87,7 +87,7 @@
             // label5
             // 
             label5.Font = new Font("Segoe UI", 10F);
-            label5.Location = new Point(54, 291);
+            label5.Location = new Point(41, 433);
             label5.Name = "label5";
             label5.Size = new Size(188, 40);
             label5.TabIndex = 6;
@@ -95,7 +95,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(54, 334);
+            button1.Location = new Point(41, 476);
             button1.Name = "button1";
             button1.Size = new Size(166, 35);
             button1.TabIndex = 7;
@@ -104,7 +104,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(237, 334);
+            button2.Location = new Point(224, 476);
             button2.Name = "button2";
             button2.Size = new Size(166, 35);
             button2.TabIndex = 8;
@@ -113,7 +113,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(436, 334);
+            button3.Location = new Point(423, 476);
             button3.Name = "button3";
             button3.Size = new Size(166, 35);
             button3.TabIndex = 9;
@@ -122,7 +122,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(54, 388);
+            button4.Location = new Point(41, 530);
             button4.Name = "button4";
             button4.Size = new Size(166, 35);
             button4.TabIndex = 10;
@@ -132,7 +132,7 @@
             // label7
             // 
             label7.Font = new Font("Segoe UI", 10F);
-            label7.Location = new Point(54, 492);
+            label7.Location = new Point(41, 638);
             label7.Name = "label7";
             label7.Size = new Size(188, 33);
             label7.TabIndex = 12;
@@ -141,7 +141,7 @@
             // label8
             // 
             label8.Font = new Font("Segoe UI", 10F);
-            label8.Location = new Point(54, 525);
+            label8.Location = new Point(41, 671);
             label8.Name = "label8";
             label8.Size = new Size(502, 33);
             label8.TabIndex = 13;
@@ -149,21 +149,21 @@
             // 
             // trackBar2
             // 
-            trackBar2.Location = new Point(253, 164);
+            trackBar2.Location = new Point(253, 254);
             trackBar2.Name = "trackBar2";
             trackBar2.Size = new Size(130, 56);
             trackBar2.TabIndex = 15;
             // 
             // trackBar3
             // 
-            trackBar3.Location = new Point(253, 102);
+            trackBar3.Location = new Point(253, 192);
             trackBar3.Name = "trackBar3";
             trackBar3.Size = new Size(130, 56);
             trackBar3.TabIndex = 16;
             // 
             // checkBox1
             // 
-            checkBox1.Location = new Point(257, 226);
+            checkBox1.Location = new Point(257, 316);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(126, 30);
             checkBox1.TabIndex = 17;
@@ -197,7 +197,7 @@
             Controls.Add(label4);
             Controls.Add(label1);
             Name = "SettingsPage";
-            Size = new Size(661, 577);
+            Size = new Size(856, 721);
             ((System.ComponentModel.ISupportInitialize)trackBar2).EndInit();
             ((System.ComponentModel.ISupportInitialize)trackBar3).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();

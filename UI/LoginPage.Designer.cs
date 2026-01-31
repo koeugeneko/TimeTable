@@ -35,6 +35,7 @@
             btnLoginLogin = new Button();
             chkRememberMe = new CheckBox();
             labelSignUp = new Label();
+            label1 = new Label();
             SuspendLayout();
             // 
             // lblUsername
@@ -42,10 +43,9 @@
             lblUsername.AutoSize = true;
             lblUsername.FlatStyle = FlatStyle.Flat;
             lblUsername.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUsername.Location = new Point(128, 146);
-            lblUsername.Margin = new Padding(4, 0, 4, 0);
+            lblUsername.Location = new Point(207, 200);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(142, 38);
+            lblUsername.Size = new Size(117, 31);
             lblUsername.TabIndex = 0;
             lblUsername.Text = "Username";
             // 
@@ -54,10 +54,9 @@
             txtUsername.BackColor = Color.White;
             txtUsername.BorderStyle = BorderStyle.FixedSingle;
             txtUsername.ForeColor = Color.Silver;
-            txtUsername.Location = new Point(128, 199);
-            txtUsername.Margin = new Padding(4);
+            txtUsername.Location = new Point(207, 242);
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(501, 31);
+            txtUsername.Size = new Size(401, 27);
             txtUsername.TabIndex = 1;
             txtUsername.Text = "Username";
             txtUsername.Click += txtUsername_Click;
@@ -67,10 +66,9 @@
             txtPassword.BackColor = Color.White;
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
             txtPassword.ForeColor = Color.Silver;
-            txtPassword.Location = new Point(126, 324);
-            txtPassword.Margin = new Padding(4);
+            txtPassword.Location = new Point(207, 326);
             txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(501, 31);
+            txtPassword.Size = new Size(401, 27);
             txtPassword.TabIndex = 3;
             txtPassword.Text = "Password";
             txtPassword.Click += txtPassword_Click;
@@ -80,10 +78,9 @@
             lblLoginPassword.AutoSize = true;
             lblLoginPassword.FlatStyle = FlatStyle.Flat;
             lblLoginPassword.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblLoginPassword.Location = new Point(117, 280);
-            lblLoginPassword.Margin = new Padding(4, 0, 4, 0);
+            lblLoginPassword.Location = new Point(200, 291);
             lblLoginPassword.Name = "lblLoginPassword";
-            lblLoginPassword.Size = new Size(132, 38);
+            lblLoginPassword.Size = new Size(110, 31);
             lblLoginPassword.TabIndex = 2;
             lblLoginPassword.Text = "Password";
             // 
@@ -91,10 +88,9 @@
             // 
             btnLoginLogin.BackColor = Color.White;
             btnLoginLogin.FlatStyle = FlatStyle.Flat;
-            btnLoginLogin.Location = new Point(372, 427);
-            btnLoginLogin.Margin = new Padding(4);
+            btnLoginLogin.Location = new Point(404, 409);
             btnLoginLogin.Name = "btnLoginLogin";
-            btnLoginLogin.Size = new Size(255, 65);
+            btnLoginLogin.Size = new Size(204, 52);
             btnLoginLogin.TabIndex = 4;
             btnLoginLogin.Text = "login";
             btnLoginLogin.UseVisualStyleBackColor = false;
@@ -103,10 +99,9 @@
             // chkRememberMe
             // 
             chkRememberMe.AutoSize = true;
-            chkRememberMe.Location = new Point(126, 396);
-            chkRememberMe.Margin = new Padding(4);
+            chkRememberMe.Location = new Point(207, 384);
             chkRememberMe.Name = "chkRememberMe";
-            chkRememberMe.Size = new Size(149, 29);
+            chkRememberMe.Size = new Size(125, 24);
             chkRememberMe.TabIndex = 5;
             chkRememberMe.Text = "RememberMe";
             chkRememberMe.UseVisualStyleBackColor = true;
@@ -115,22 +110,32 @@
             // labelSignUp
             // 
             labelSignUp.Font = new Font("Segoe UI", 9F);
-            labelSignUp.Location = new Point(126, 461);
-            labelSignUp.Margin = new Padding(4, 0, 4, 0);
+            labelSignUp.Location = new Point(207, 436);
             labelSignUp.Name = "labelSignUp";
             labelSignUp.RightToLeft = RightToLeft.No;
-            labelSignUp.Size = new Size(79, 31);
+            labelSignUp.Size = new Size(63, 25);
             labelSignUp.TabIndex = 6;
             labelSignUp.Text = "Sign up";
             labelSignUp.Click += labelSignUp_Click;
             labelSignUp.MouseEnter += labelSignUp_MouseEnter;
             labelSignUp.MouseLeave += labelSignUp_MouseLeave;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = Color.Red;
+            label1.Location = new Point(207, 170);
+            label1.Name = "label1";
+            label1.Size = new Size(222, 20);
+            label1.TabIndex = 7;
+            label1.Text = "Username or password incorrect";
+            // 
             // LoginPage
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImageLayout = ImageLayout.Stretch;
+            Controls.Add(label1);
             Controls.Add(labelSignUp);
             Controls.Add(chkRememberMe);
             Controls.Add(btnLoginLogin);
@@ -139,9 +144,8 @@
             Controls.Add(txtUsername);
             Controls.Add(lblUsername);
             DoubleBuffered = true;
-            Margin = new Padding(4);
             Name = "LoginPage";
-            Size = new Size(826, 721);
+            Size = new Size(856, 721);
             Load += LoginPage_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -156,5 +160,6 @@
         private Button btnLoginLogin;
         private CheckBox chkRememberMe;
         private Label labelSignUp;
+        private Label label1;
     }
 }

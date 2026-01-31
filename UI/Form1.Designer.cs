@@ -30,7 +30,9 @@
         {
             panelMain = new Panel();
             panelSide = new Panel();
-            panel1 = new Panel();
+            panelSideTop = new Panel();
+            panelSideBottom = new Panel();
+            panelSide.SuspendLayout();
             SuspendLayout();
             // 
             // panelMain
@@ -38,46 +40,54 @@
             panelMain.BackColor = Color.Transparent;
             panelMain.Dock = DockStyle.Fill;
             panelMain.Location = new Point(150, 0);
-            panelMain.Margin = new Padding(4);
             panelMain.Name = "panelMain";
-            panelMain.Size = new Size(852, 732);
+            panelMain.Size = new Size(856, 721);
             panelMain.TabIndex = 0;
             // 
             // panelSide
             // 
-            panelSide.BackColor = Color.Gray;
+            panelSide.BackColor = Color.Transparent;
+            panelSide.Controls.Add(panelSideTop);
+            panelSide.Controls.Add(panelSideBottom);
             panelSide.Dock = DockStyle.Left;
             panelSide.Location = new Point(0, 0);
-            panelSide.Margin = new Padding(4);
             panelSide.Name = "panelSide";
-            panelSide.Size = new Size(150, 732);
+            panelSide.Size = new Size(150, 721);
             panelSide.TabIndex = 1;
             // 
-            // panel1
+            // panelSideTop
             // 
-            panel1.BackColor = Color.Gray;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(150, 40);
-            panel1.TabIndex = 0;
+            panelSideTop.BackColor = Color.Transparent;
+            panelSideTop.Location = new Point(0, 0);
+            panelSideTop.Margin = new Padding(2);
+            panelSideTop.Name = "panelSideTop";
+            panelSideTop.Size = new Size(150, 100);
+            panelSideTop.TabIndex = 0;
+            // 
+            // panelSideBottom
+            // 
+            panelSideBottom.BackColor = Color.DimGray;
+            panelSideBottom.Location = new Point(0, 100);
+            panelSideBottom.Name = "panelSideBottom";
+            panelSideBottom.Size = new Size(150, 621);
+            panelSideBottom.TabIndex = 0;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1002, 732);
+            ClientSize = new Size(1006, 721);
             Controls.Add(panelMain);
-            Controls.Add(panel1);
             Controls.Add(panelSide);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(4);
             MaximizeBox = false;
-            MaximumSize = new Size(1024, 788);
-            MinimumSize = new Size(1024, 788);
+            MaximumSize = new Size(1024, 768);
+            MinimumSize = new Size(1024, 768);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "WinForms";
             Load += Form1_Load;
+            panelSide.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -85,6 +95,7 @@
 
         private Panel panelMain;
         private Panel panelSide;
-        private Panel panel1;
+        private Panel panelSideTop;
+        private Panel panelSideBottom;
     }
 }
