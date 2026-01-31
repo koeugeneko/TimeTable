@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using TimeTable.Data;
 
 namespace TimeTable.Logic
 {
@@ -21,7 +22,7 @@ namespace TimeTable.Logic
         public static bool Login(string username, string password)
         {   
             User user = new User(username, password);
-            
+            TimeTable.Data.DataLayer.GetHashedPasswordFromDatabse(user);
             return true;
         }
 

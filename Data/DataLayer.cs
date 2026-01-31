@@ -1,78 +1,146 @@
-﻿using Npgsql;
-
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using Npgsql;
+using TimeTable.Logic;
 
 namespace TimeTable.Data
 {
     public class DataLayer
-    {   
-        private static class DbConnection
+    {
+        private static readonly string ConnectionString = "Host=localhost;Port=5432;Database=TimeTable;Username=postgres;Password=Ek002";
+
+
+        // INSERT / UPDATE / DELETE mutiple data
+        public static int ExecuteNonQuery(string sql, Dictionary<string, object> parameters = null)
         {
-            public static string ConnectionString = "Host=localhost;Port=5432;Database=TimeTable;Username=postgres;Password=Ek002";
+            using var conn = new NpgsqlConnection(ConnectionString);
+            conn.Open();
+
+            using var cmd = new NpgsqlCommand(sql, conn);
+            if (parameters != null)
+            {
+                foreach (var p in parameters)
+                    cmd.Parameters.AddWithValue(p.Key, p.Value);
+            }
+
+            return cmd.ExecuteNonQuery();
+        }
+        // INSERT / UPDATE / DELETE signel data
+        public static object ExecuteScalar(string sql, Dictionary<string, object> parameters = null)
+        {
+            using var conn = new NpgsqlConnection(ConnectionString);
+            conn.Open();
+
+            using var cmd = new NpgsqlCommand(sql, conn);
+            if (parameters != null)
+            {
+                foreach (var p in parameters)
+                    cmd.Parameters.AddWithValue(p.Key, p.Value);
+            }
+
+            return cmd.ExecuteScalar();
         }
 
-        // INSERT / UPDATE / DELETE
-        public static async Task ExecuteSQLAsync(string SQL)
-        {
-            using (var conn = new NpgsqlConnection(DbConnection.ConnectionString))
-            {
-                await conn.OpenAsync();
-                using (var cmd = new NpgsqlCommand(SQL, conn))
-                {
-                    await cmd.ExecuteNonQueryAsync();
-                }
-            }
-        }
 
         // SELECT
-        public static List<Dictionary<string, object>> Reader(string SQL)
+        public static List<Dictionary<string, object>> ExecuteQuery(string sql, Dictionary<string, object> parameters = null)
         {
             var result = new List<Dictionary<string, object>>();
 
-            using (var conn = new NpgsqlConnection(DbConnection.ConnectionString))
+            using var conn = new NpgsqlConnection(ConnectionString);
+            conn.Open();
+
+            using var cmd = new NpgsqlCommand(sql, conn);
+            if (parameters != null)
             {
-                conn.Open();
-                using (var cmd = new NpgsqlCommand(SQL, conn))
-                using (var reader = cmd.ExecuteReader())
+                foreach (var p in parameters)
+                    cmd.Parameters.AddWithValue(p.Key, p.Value);
+            }
+
+            using var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                var row = new Dictionary<string, object>();
+                for (int i = 0; i < reader.FieldCount; i++)
                 {
-                    while (reader.Read())
-                    {
-                        var row = new Dictionary<string, object>();
-                        for (int i = 0; i < reader.FieldCount; i++)
-                        {
-                            row[reader.GetName(i)] = reader.GetValue(i);
-                        }
-                        result.Add(row);
-                    }
+                    row[reader.GetName(i)] = reader.GetValue(i);
                 }
+                result.Add(row);
             }
 
             return result;
         }
-        public static void GetUserID()
-        {
-            string sql = $@"SELECT user_id From users where username = @username";
-            Reader(sql);
-        }
 
-        public static void CreatUser()
-        {
-            string sql = @"CREATE user";
-        }
-
-        public static void GetHashedPasswordFromDatabse()
+        // user related
+        public static void GetHashedPasswordFromDatabse(Logic.User user)
         {
             string sql = @"
                 SELECT u.user_id, u.username, up.hashed_password
-                FROM Users u
-                INNER JOIN UserPasswords up ON u.user_id = up.user_id
+                FROM users u
+                INNER JOIN user_passwords up ON u.user_id = up.user_id
                 WHERE u.username = @username";
+
+
         }
 
+        public static void InsertUserIntoDatabase()
+        {
+            string sql = @"
+                INSERT INTO Users (username, email)
+                VALUES (@username, @email)
+                RETURNING user_id;
+                INSERT INTO UserPasswords (user_id, hashed_password)
+                VALUES (@user_id, @hashed_password);";
+        }
+
+        // task related
         public static void GetTasksFromDatabase()
         {
             string sql = $@"SELECT task_id, description, priority, estimated_min FROM tasks WHERE completed = false AND DueDate >= {TimeOnly.FromDateTime(DateTime.Now)}";
         }
+        public static void InsertTaskIntoDatabase()
+        {
+            string sql = @"INSERT INTO tasks (description, priority, estimated_min, due_date, subject_id) VALUES (@description, @priority, @estimated_min, @due_date, @subject_id);";
+        }
+        public static void UpdateTaskInDatabase()
+        {
+            string sql = @"UPDATE tasks SET description = @description, priority = @priority, estimated_min = @estimated_min, due_date = @due_date, subject_id = @subject_id WHERE task_id = @task_id;";
+        }
+        public static void DeleteTaskFromDatabase()
+        {
+            string sql = @"DELETE FROM tasks WHERE task_id = @task_id;";
+        }
+        public static void MarkTaskAsCompletedInDatabase()
+        {
+            string sql = @"UPDATE tasks SET completed = true WHERE task_id = @task_id;";
+        }
 
+        // subject related
+        public static void GetSubjectsFromDatabase()
+        {
+            string sql = @"SELECT subject_id, subject_name, color FROM subjects";
+        }
 
+        public static void InsertSubjectIntoDatabase()
+        {
+            string sql = @"INSERT INTO subjects (subject_name, color) VALUES (@subject_name, @color);";
+        }
+        public static void UpdateSubjectInDatabase()
+        {
+            string sql = @"UPDATE subjects SET subject_name = @subject_name, color = @color WHERE subject_id = @subject_id;";
+        }
+        public static void DeleteSubjectFromDatabase()
+        {
+            string sql = @"DELETE FROM subjects WHERE subject_id = @subject_id;";
+        }
+
+        // plan related
+        public static void GetPlansFromDatabase()
+        {
+            string sql = @"SELECT plan_id, plan_name, start_time, end_time, recurrence FROM plans";
+        }
+        public static void InsertPlanIntoDatabase()
+        {
+            string sql = @"INSERT INTO plans (plan_name, start_time, end_time, recurrence) VALUES (@plan_name, @start_time, @end_time, @recurrence);";
+        }
     }
 }

@@ -43,11 +43,11 @@
             dataGridView1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { SubjectColumn, DescriptionCoulmn, EstimatedTimeColumn, DueDateColumn, PriorityColumn, StatsColumn });
-            dataGridView1.Location = new Point(1, 96);
+            dataGridView1.Location = new Point(37, 131);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(854, 348);
+            dataGridView1.Size = new Size(773, 348);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
